@@ -1,2 +1,10 @@
-# Backend VivaPerifa
-Este repositório contém o backend do VivaPerifa
+![vivap](vivap.png)
+
+**Backend VivaPerifa**
+
+
+Este repositório visa a construção BackEnd do projeto viva perifa
+
+
+
+
