@@ -1,2 +1,2 @@
-# vivaperifa-backend
-Backend do VivaPerifa
+# Backend VivaPerifa
+Este repositório contém o backend do VivaPerifa
