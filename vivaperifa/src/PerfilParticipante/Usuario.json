@@ -1,0 +1,8 @@
+{
+   "id": "6093ab6906575e5714b4469a",
+   "nomeDeUsuario": "exemplo_usuario",
+   "email": "exemplo@email.com",
+   "senha": "senha_hashed",
+   "criadoEm": "2024-06-08T10:00:00Z",
+   "atualizadoEm": "2024-06-08T10:00:00Z"
+}
