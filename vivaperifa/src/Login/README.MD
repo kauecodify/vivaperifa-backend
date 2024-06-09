@@ -12,7 +12,7 @@ conexão > SpringBoot para MongoDB usando SpringDataMongoDB.
 
 -------------------------------------------------------------------------------------------
 
-**application.properties**
+**application.properties.java**
 
 **em (pom.xml) a dependência #'spring-boot-starter-data-mongodb'# precisa estar alocada**
 
@@ -26,7 +26,7 @@ spring.data.mongodb.database=mydatabase
 
 -------------------------------------------------------------------------------------------
 
- **application.yml ou json {}.**
+ **application.yml ou json {}.** 
 
       spring:
 
@@ -46,7 +46,8 @@ spring.data.mongodb.database=mydatabase
 @SpringBootApplication 
 
 -------------------------------------------------------------------------------------------
-#
+**MyApplication.java**
+
 import org.springframework.boot.SpringApplication;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -58,4 +59,4 @@ public class MyApplication {
         SpringApplication.run(MyApplication.class, args);
     }
 }
-#
+
