@@ -1,0 +1,18 @@
+{
+  "nomeUsuario": "organizador123",
+  "descricaoBreve": "Organizador de eventos",
+  "redesSociais": {
+    "twitter": "organizador123",
+    "facebook": "organizador123",
+    "instagram": "organizador123"
+  },
+  "dadosAcesso": {
+    "email": "organizador@example.com",
+    "senha": "senha123"
+  },
+  "organizacao": {
+    "nome": "Minha Organização",
+    "cnpj": "12345678901234",
+    "telefone": "123456789"
+  }
+}
