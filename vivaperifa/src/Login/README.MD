@@ -1,5 +1,7 @@
 **Comunicação via Spring Data MongoDB para interagir com o banco de dados MongoDB**
 
+![tela](tela.png)
+
 Segurança > implementar funções de hash para armazenamento BCrypt
 
  1 - conexão > SpringBoot para MongoDB usando SpringDataMongoDB.
