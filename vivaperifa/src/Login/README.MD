@@ -6,16 +6,16 @@
 
 Segurança > implementar funções de hash para armazenamento BCrypt
 
- 1 - conexão > SpringBoot para MongoDB usando SpringDataMongoDB.
+conexão > SpringBoot para MongoDB usando SpringDataMongoDB.
 
- * em (pom.xml) a dependência #'spring-boot-starter-data-mongodb'# precisa estar alocada
+ **em (pom.xml) a dependência #'spring-boot-starter-data-mongodb'# precisa estar alocada**
  
-* application.properties
+application.properties
 spring.data.mongodb.host=localhost
 spring.data.mongodb.port=27017
 spring.data.mongodb.database=mydatabase
 
- * application.yml
+ application.yml ou json {}.
       spring:
         data:
           mongodb:
