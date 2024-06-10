@@ -8,6 +8,9 @@ public class VivaPerifaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(VivaPerifaApplication.class, args);
+
+		
+	
 	}
 
 }

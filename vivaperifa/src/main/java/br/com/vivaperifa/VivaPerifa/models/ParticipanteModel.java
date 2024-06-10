@@ -6,11 +6,14 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("participante")
-public class ParticipanteModel extends UsuarioAbstrato{
+public class ParticipanteModel{
     @Id
     private String id;
     private String nomeCompleto;
-    private List<ComentarioModel> comentarios;
+    private Data dataNascimento;
+    private EnderecoModel endereco;
+    private Usuario usuario;
+    private List<CategoriaModel> interesses;
     private List<EventoModel> eventosFavoritos;
 
     public ParticipanteModel(){
@@ -33,20 +36,44 @@ public class ParticipanteModel extends UsuarioAbstrato{
         this.nomeCompleto = nomeCompleto;
     }
 
-    public List<ComentarioModel> getComentarios() {
-        return comentarios;
-    }
-
-    public void setComentarios(List<ComentarioModel> comentarios) {
-        this.comentarios = comentarios;
-    }
-
     public List<EventoModel> getEventosFavoritos() {
         return eventosFavoritos;
     }
 
     public void setEventosFavoritos(List<EventoModel> eventosFavoritos) {
         this.eventosFavoritos = eventosFavoritos;
+    }
+
+    public Data getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Data dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public List<CategoriaModel> getInteresses() {
+        return interesses;
+    }
+
+    public void setInteresses(List<CategoriaModel> interesses) {
+        this.interesses = interesses;
+    }
+
+    public EnderecoModel getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(EnderecoModel endereco) {
+        this.endereco = endereco;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     

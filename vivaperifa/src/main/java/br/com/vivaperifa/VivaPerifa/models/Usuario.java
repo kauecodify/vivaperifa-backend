@@ -1,23 +1,14 @@
 package br.com.vivaperifa.VivaPerifa.models;
 
-public abstract class UsuarioAbstrato {
-    private String nomeUsuario;
+public class Usuario {
     private String email;
     private String senha;
     private String telefone;
+    private String status; //ativo/inativo
     private int reputacaoComunidade;
-    private String status;
 
-    public UsuarioAbstrato(){
+    public Usuario(){
 
-    }
-
-    public String getNomeUsuario() {
-        return nomeUsuario;
-    }
-
-    public void setNomeUsuario(String nomeUsuario) {
-        this.nomeUsuario = nomeUsuario;
     }
 
     public String getEmail() {

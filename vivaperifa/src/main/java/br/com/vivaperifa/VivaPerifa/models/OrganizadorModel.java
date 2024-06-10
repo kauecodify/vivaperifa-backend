@@ -3,18 +3,19 @@ package br.com.vivaperifa.VivaPerifa.models;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-public class OrganizadorModel extends UsuarioAbstrato{
+@Document("organizador")
+public class OrganizadorModel{
     @Id
     private String id;
-    private String nomeEmpresa;
-    private String cnpj;
     private String descricaoPerfil;
-    private String tipoUsuario; //premium ou comum
-    private List<EventoModel> eventosPublicados;
+    private Usuario usuario;
+    private PlanoModel plano;
+    private List<String> redesSociais;
+    //adicionar mascara
 
     public OrganizadorModel(){
-        super();
     }
 
     public String getId() {
@@ -25,22 +26,6 @@ public class OrganizadorModel extends UsuarioAbstrato{
         this.id = id;
     }
 
-    public String getNomeEmpresa() {
-        return nomeEmpresa;
-    }
-
-    public void setNomeEmpresa(String nomeEmpresa) {
-        this.nomeEmpresa = nomeEmpresa;
-    }
-
-    public String getCnpj() {
-        return cnpj;
-    }
-
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
-    }
-
     public String getDescricaoPerfil() {
         return descricaoPerfil;
     }
@@ -48,21 +33,29 @@ public class OrganizadorModel extends UsuarioAbstrato{
     public void setDescricaoPerfil(String descricaoPerfil) {
         this.descricaoPerfil = descricaoPerfil;
     }
-    
-    public String getTipoUsuario(){
-        return tipoUsuario;
+
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setTipoUsuario(String tipoUsuario){
-        this.tipoUsuario = tipoUsuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public List<EventoModel> getEventosPublicados() {
-        return eventosPublicados;
+    public PlanoModel getPlano() {
+        return plano;
     }
 
-    public void setEventosPublicados(List<EventoModel> eventosPublicados) {
-        this.eventosPublicados = eventosPublicados;
+    public void setPlano(PlanoModel plano) {
+        this.plano = plano;
+    }
+
+    public List<String> getRedesSociais() {
+        return redesSociais;
+    }
+
+    public void setRedesSociais(List<String> redesSociais) {
+        this.redesSociais = redesSociais;
     }
     
     

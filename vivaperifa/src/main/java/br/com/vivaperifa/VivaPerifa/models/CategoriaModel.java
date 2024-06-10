@@ -1,14 +1,15 @@
 package br.com.vivaperifa.VivaPerifa.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-public class CategoriaEventoModel {
+@Document("categoria")
+public class CategoriaModel {
     @Id
     private String id;
     private String nomeCategoria;
-    private String descricaoCategoria;
 
-    public CategoriaEventoModel(){
+    public CategoriaModel(){
 
     }
 
@@ -27,14 +28,4 @@ public class CategoriaEventoModel {
     public void setNomeCategoria(String nomeCategoria) {
         this.nomeCategoria = nomeCategoria;
     }
-
-    public String getDescricaoCategoria() {
-        return descricaoCategoria;
-    }
-
-    public void setDescricaoCategoria(String descricaoCategoria) {
-        this.descricaoCategoria = descricaoCategoria;
-    }
-
-    
 }
