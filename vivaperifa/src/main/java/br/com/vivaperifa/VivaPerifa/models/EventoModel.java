@@ -1,116 +1,203 @@
 package br.com.vivaperifa.VivaPerifa.models;
 
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("evento")
 public class EventoModel {
+    //detalhes
     @Id
     private String id;
     private String titulo;
+    private String caminhoImagem;
     private String descricao;
     private String faixaEtaria;
-    private String statusVisibilidade;
-    private OrganizadorModel organizador;
+    private String visibilidade;
+    private CategoriaModel categoria;
+    private String localVendaIngresso;
     private int quantidadeGostei;
-    private List<ProgramacaoModel> programacao;
-    private List<ComentarioModel> comentarios;
-    private List<IngressoModel> ingressos;
-    private CategoriaEventoModel categoria;
+    private OrganizadorModel organizador;
+
+    //programação
+    private EnderecoModel endereco;
+    private Hora horarioInicio;
+    private Hora horarioFim;
+    private Data dataInicio;
+    private Data dataFim;
+   
+    //comentarios
+    private double notaAvaliacao;
+    private int quantidadeAvaliacao;
     
     public EventoModel(){
 
+    }
+
+    
+    public String getCaminhoImagem() {
+        return caminhoImagem;
+    }
+
+    public void setCaminhoImagem(String caminhoImagem) {
+        this.caminhoImagem = caminhoImagem;
     }
 
     public String getId() {
         return id;
     }
 
+
     public void setId(String id) {
         this.id = id;
     }
+
 
     public String getTitulo() {
         return titulo;
     }
 
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
 
     public String getDescricao() {
         return descricao;
     }
 
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
 
     public String getFaixaEtaria() {
         return faixaEtaria;
     }
 
+
     public void setFaixaEtaria(String faixaEtaria) {
         this.faixaEtaria = faixaEtaria;
     }
 
-    public String getStatusVisibilidade() {
-        return statusVisibilidade;
+
+    public String getVisibilidade() {
+        return visibilidade;
     }
 
-    public void setStatusVisibilidade(String statusVisibilidade) {
-        this.statusVisibilidade = statusVisibilidade;
+
+    public void setVisibilidade(String visibilidade) {
+        this.visibilidade = visibilidade;
     }
 
-    public OrganizadorModel getOrganizador(){
-        return organizador;
+
+    public CategoriaModel getCategoria() {
+        return categoria;
     }
 
-    public void setOrganizador(OrganizadorModel organizador){
-        this.organizador = organizador;
+
+    public void setCategoria(CategoriaModel categoria) {
+        this.categoria = categoria;
     }
+
+
+    public String getLocalVendaIngresso() {
+        return localVendaIngresso;
+    }
+
+
+    public void setLocalVendaIngresso(String localVendaIngresso) {
+        this.localVendaIngresso = localVendaIngresso;
+    }
+
 
     public int getQuantidadeGostei() {
         return quantidadeGostei;
     }
 
+
     public void setQuantidadeGostei(int quantidadeGostei) {
         this.quantidadeGostei = quantidadeGostei;
     }
 
-    public List<ProgramacaoModel> getProgramacao() {
-        return programacao;
+
+    public OrganizadorModel getOrganizador() {
+        return organizador;
     }
 
-    public void setProgramacao(List<ProgramacaoModel> programacao) {
-        this.programacao = programacao;
+
+    public void setOrganizador(OrganizadorModel organizador) {
+        this.organizador = organizador;
     }
 
-    public List<ComentarioModel> getComentarios() {
-        return comentarios;
+
+    public EnderecoModel getEndereco() {
+        return endereco;
     }
 
-    public void setComentarios(List<ComentarioModel> comentarios) {
-        this.comentarios = comentarios;
+
+    public void setEndereco(EnderecoModel endereco) {
+        this.endereco = endereco;
     }
 
-    public List<IngressoModel> getIngressos() {
-        return ingressos;
+
+    public Hora getHorarioInicio() {
+        return horarioInicio;
     }
 
-    public void setIngressos(List<IngressoModel> ingressos) {
-        this.ingressos = ingressos;
+
+    public void setHorarioInicio(Hora horarioInicio) {
+        this.horarioInicio = horarioInicio;
     }
 
-    public CategoriaEventoModel getCategoria() {
-        return categoria;
+
+    public Hora getHorarioFim() {
+        return horarioFim;
     }
 
-    public void setCategoria(CategoriaEventoModel categoria) {
-        this.categoria = categoria;
+
+    public void setHorarioFim(Hora horarioFim) {
+        this.horarioFim = horarioFim;
     }
 
+
+    public Data getDataInicio() {
+        return dataInicio;
+    }
+
+
+    public void setDataInicio(Data dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+
+    public Data getDataFim() {
+        return dataFim;
+    }
+
+
+    public void setDataFim(Data dataFim) {
+        this.dataFim = dataFim;
+    }
+
+    public double getNotaAvaliacao() {
+        return notaAvaliacao;
+    }
+
+
+    public void setNotaAvaliacao(double notaAvaliacao) {
+        this.notaAvaliacao = notaAvaliacao;
+    }
+
+
+    public int getQuantidadeAvaliacao() {
+        return quantidadeAvaliacao;
+    }
+
+
+    public void setQuantidadeAvaliacao(int quantidadeAvaliacao) {
+        this.quantidadeAvaliacao = quantidadeAvaliacao;
+    }
     
 }

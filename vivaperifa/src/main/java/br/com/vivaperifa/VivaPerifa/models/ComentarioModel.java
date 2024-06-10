@@ -1,16 +1,19 @@
 package br.com.vivaperifa.VivaPerifa.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document("comentario")
 public class ComentarioModel {
     @Id
     private String id;
-    private ParticipanteModel participante;
     private String descricao;
+    private Data data;
+    private Hora horario;
+    private double notaAvaliacao;
     private int quantidadeGostei;
-    private String data;
-    private String horario;
-    private int avaliacao;
+    private ParticipanteModel participante;
+    private EventoModel evento;
 
     public ComentarioModel(){
 
@@ -48,29 +51,38 @@ public class ComentarioModel {
         this.quantidadeGostei = quantidadeGostei;
     }
 
-    public String getData() {
+    public Data getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Data data) {
         this.data = data;
     }
 
-    public String getHorario() {
+    public Hora getHorario() {
         return horario;
     }
 
-    public void setHorario(String horario) {
+    public void setHorario(Hora horario) {
         this.horario = horario;
     }
 
-    public int getAvaliacao() {
-        return avaliacao;
+    public double getNotaAvaliacao() {
+        return notaAvaliacao;
     }
 
-    public void setAvaliacao(int avaliacao) {
-        this.avaliacao = avaliacao;
+    public void setNotaAvaliacao(double notaAvaliacao) {
+        this.notaAvaliacao = notaAvaliacao;
     }
 
+    public EventoModel getEvento() {
+        return evento;
+    }
+
+    public void setEvento(EventoModel evento) {
+        this.evento = evento;
+    }
+
+    
     
 }
